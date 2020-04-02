@@ -2,16 +2,23 @@
 Repo. for GNSS Lab @ ETHZ
 
 ## Dataset
-http://ring.gm.ingv.it/?p=1333
+[RING Itatly](http://ring.gm.ingv.it/?p=1333)
+
+![alt text](asset/map.jpg)
+
 
 ## Software
-1.RTKLib
+1.TEQC: preprocessing routine
+[software]() [blog](http://wap.sciencenet.cn/home.php?mod=space&uid=3391834&do=blog&id=1151091)
 
-2.PPPWizard
+2.RTKLib: RTK with different baseline distance
+[code](https://github.com/tomojitakasu/RTKLIB) [blog](https://zhuanlan.zhihu.com/p/78359579)
 
-3.WHU Pride PPPAR
+3.PPPWizard: Realtime PPP
+[code]()
 
-
+4.WHU Pride PPPAR: PPP post processing (as ground truth)
+[code](https://github.com/YuePanEdward/PRIDE-PPPAR) [blog]() 
 
 ## General Idea
   
@@ -20,7 +27,6 @@ http://ring.gm.ingv.it/?p=1333
   First, analyze static data (no earthquake): Look for two stations, that are closest, and compute short baseline solutions with RTKLIB. Then take stations each at a distance of few tens of km, hundret km, and maximum distance away (around 180 km). Use these as base stations, and compute baseline solutions to the rover station of your choice. First of all, I would try 1 Hz data, and then test higher rates. The datasets should have a length of 2-3 hours or so (convergence time will be needed).
   
   Concerning the first step: you will have to convert the data, that is in RINEX Hatanaka compressed format, to standard RINEX observation files. For baseline lengths of tens of kilometers and more, you will have to use the RTKLIB setup as documented in the RTKLIB long-baseline paper (see repository). You may also analyze the data (skyplot, multipath etc) with some basic tools (RTKLIB, teqc).
-   
    
   Secondly, compute PPP solutions for the rover station: use the PPPWizard software, and also the postprocessing PPP software from Wuhan. Compare the PPP solutions with the solutions from the baseline processing. For seismic applications, it is more important to have good estimates of the displacement -- it is not the absolute coordinates that matter that much. So we can basically de-mean the timeseries for a noise comparison. (Nevertheless, biases are interesting too, especially if we compare the PPP solutions). 
   
