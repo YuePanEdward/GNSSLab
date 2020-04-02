@@ -8,17 +8,29 @@ Repo. for GNSS Lab @ ETHZ
 
 
 ## Software
-1.TEQC: preprocessing routine
-[software]() [blog](http://wap.sciencenet.cn/home.php?mod=space&uid=3391834&do=blog&id=1151091)
+1.RNXCMP: uncompressing and format transformer (like crx2rnx)
 
-2.RTKLib: RTK with different baseline distance
+[software](https://terras.gsi.go.jp/ja/crx2rnx.html) [blog](http://blog.sciencenet.cn/blog-1217335-1010460.html)
+
+2.TEQC: preprocessing routine
+
+[software](https://www.unavco.org/software/data-processing/teqc/teqc.html) [blog](http://wap.sciencenet.cn/home.php?mod=space&uid=3391834&do=blog&id=1151091)
+
+3.RTKLib: RTK with different baseline distance
+
 [code](https://github.com/tomojitakasu/RTKLIB) [blog](https://zhuanlan.zhihu.com/p/78359579)
 
-3.PPPWizard: Realtime PPP
+4.PPPWizard: Realtime PPP
+
 [code]()
 
-4.WHU Pride PPPAR: PPP post processing (as ground truth)
+5.WHU Pride PPPAR: PPP post processing (as ground truth)
+
 [code](https://github.com/YuePanEdward/PRIDE-PPPAR) [blog]() 
+
+6.GPS toolboxs: other useful softwares
+
+[link](https://www.ngs.noaa.gov/gps-toolbox/) 
 
 ## General Idea
   
