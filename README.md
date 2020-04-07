@@ -4,7 +4,7 @@ Repo. for GNSS Lab @ ETHZ
 ## Dataset
 [RING Itatly](http://ring.gm.ingv.it/?p=1333)
 
-![alt text](asset/map.jpg)
+![alt text](asset/map01.jpg)
 
 #### Static (low frequency)
 ```
@@ -19,17 +19,21 @@ MALT (~1400km)
 #### Static (high frequency)
 ```
 Frequency: 1 Hz
-Duration:  //2016(DOY200) 
+Duration: 1/11/2016(DOY306) 
 Rover station: MSAN
 Base station: from shortest to longest baseline
 RIFP (~1km)
-FOND (~175km)
+ACCU (~8km)
+AMAT (~20km)
+ROPI (~50km)
+VALM (~110km)
+FOND (~170km)
 ```
 
 #### Dynamic ("5.4b" Earthquake of October 26, 2016, very high frequency) 
 ```
 Frequency: 10 Hz
-Duration: 16/10/2016(DOY300) 15:00-19:00 (earthquake at 17:10)
+Duration: 26/10/2016(DOY300) 15:00-19:00 (earthquake at 17:10)
 Rover Station: station closest to the center of earthquake, MSAN (~10km)
 Base Station: station farthest from the center of earthquake, FOND (~175km)
 ```
@@ -57,7 +61,7 @@ Base Station: station farthest from the center of earthquake, FOND (~175km)
 
 6.GPS toolboxs: other useful softwares
 
-[link](https://www.ngs.noaa.gov/gps-toolbox/) 
+[link](https://www.ngs.noaa.gov/gps-toolbox/)  such as GAMP
 
 ## General Idea
   
@@ -74,4 +78,8 @@ Base Station: station farthest from the center of earthquake, FOND (~175km)
 
    Basically it may be a good idea to process the static data and the dynamic data as a whole. That would then result in datasets of about 3-4 hours (Those might get pretty large for rates at 10 or 20 Hz). Concerning coordinate repeatability (and multipath effects), it would also be interesting to process the data of the day before (or even two days before). For the noise analysis, I would also tranform the ECEF coordinates to an ENU (east,north,up) coordinate system. As reference coordinates, you could use time-averaged coordinates from the PPP-PRIDE results, since these might be the most reliable ones, since they rely on the final orbit and clock products.
 
-
+## Schedule
+```
+1. 4.21 Mid-term presentation
+2. 5.29 Final presentation + report paper
+```
