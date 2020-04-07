@@ -6,6 +6,20 @@ Repo. for GNSS Lab @ ETHZ
 
 ![alt text](asset/map.jpg)
 
+#### Static
+```
+Frequency: 1 Hz
+Duration: 
+Rover station:
+Base station:
+```
+#### Dynamic("5.4b" of October 26, 2016) 
+```
+Frequency: 20 Hz
+Duration: 16/10/2016 15:00-19:00 (earthquake at 17:10)
+Rover Station: station closest to the center of earthquake, ARQT (16km)
+Base Station: station farthest from the center of earthquake, ATTE (74km)
+```
 
 ## Software
 1.RNXCMP: uncompressing and format transformer (like crx2rnx)
