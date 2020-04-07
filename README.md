@@ -9,15 +9,15 @@ Repo. for GNSS Lab @ ETHZ
 #### Static
 ```
 Frequency: 1 Hz
-Duration: 
-Rover station:
-Base station:
+Duration:  //2016(DOY200) 
+Rover station: MT06
+Base station: MT01 (shortest baseline), MALT (longest baseline)
 ```
 #### Dynamic("5.4b" of October 26, 2016) 
 ```
-Frequency: 20 Hz
-Duration: 16/10/2016 15:00-19:00 (earthquake at 17:10)
-Rover Station: station closest to the center of earthquake, ARQT (16km)
+Frequency: 10 Hz
+Duration: 16/10/2016(DOY300) 15:00-19:00 (earthquake at 17:10)
+Rover Station: station closest to the center of earthquake, USSI (10km)
 Base Station: station farthest from the center of earthquake, ATTE (74km)
 ```
 
