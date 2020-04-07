@@ -6,19 +6,32 @@ Repo. for GNSS Lab @ ETHZ
 
 ![alt text](asset/map.jpg)
 
-#### Static
+#### Static (low frequency)
+```
+Frequency: 1/30 Hz
+Duration:  //2016(DOY200) 
+Rover station: MT06
+Base station: from shortest to longest baseline
+MT01 (~9km)
+MALT (~1400km)
+```
+
+#### Static (high frequency)
 ```
 Frequency: 1 Hz
 Duration:  //2016(DOY200) 
-Rover station: MT06
-Base station: MT01 (shortest baseline), MALT (longest baseline)
+Rover station: MSAN
+Base station: from shortest to longest baseline
+RIFP (~1km)
+FOND (~175km)
 ```
-#### Dynamic("5.4b" of October 26, 2016) 
+
+#### Dynamic ("5.4b" Earthquake of October 26, 2016, very high frequency) 
 ```
 Frequency: 10 Hz
 Duration: 16/10/2016(DOY300) 15:00-19:00 (earthquake at 17:10)
-Rover Station: station closest to the center of earthquake, USSI (10km)
-Base Station: station farthest from the center of earthquake, ATTE (74km)
+Rover Station: station closest to the center of earthquake, MSAN (~10km)
+Base Station: station farthest from the center of earthquake, FOND (~175km)
 ```
 
 ## Software
@@ -40,7 +53,7 @@ Base Station: station farthest from the center of earthquake, ATTE (74km)
 
 5.WHU Pride PPPAR: PPP post processing (as ground truth)
 
-[code](https://github.com/YuePanEdward/PRIDE-PPPAR) [blog]() 
+[code](https://github.com/YuePanEdward/PRIDE-PPPAR) [blog](https://zhuanlan.zhihu.com/p/101144206) 
 
 6.GPS toolboxs: other useful softwares
 
