@@ -35,8 +35,6 @@ Base Station: station farthest from the center of earthquake, FOND (~175km)
 
 #### Static (low frequency , not used)
 
-![alt text](asset/map2.jpg)
-
 ```
 Frequency: 1/30 Hz
 Duration:  //2016(DOY200) 
