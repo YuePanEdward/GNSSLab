@@ -7,19 +7,6 @@ Project members: Han Sun, Yue Pan
 [RING Itatly](http://ring.gm.ingv.it/?p=1333)
 
 
-#### Static (low frequency)
-
-![alt text](asset/map2.jpg)
-
-```
-Frequency: 1/30 Hz
-Duration:  //2016(DOY200) 
-Rover station: MT06
-Base station: from shortest to longest baseline
-MT01 (~9km)
-MALT (~1400km)
-```
-
 #### Static (high frequency)
 
 ![alt text](asset/map1.jpg)
@@ -46,6 +33,23 @@ Rover Station: station closest to the center of earthquake, MSAN (~10km)
 Base Station: station farthest from the center of earthquake, FOND (~175km)
 ```
 
+#### Static (low frequency , not used)
+
+![alt text](asset/map2.jpg)
+
+```
+Frequency: 1/30 Hz
+Duration:  //2016(DOY200) 
+Rover station: MT06
+Base station: from shortest to longest baseline
+MT01 (~9km)
+MALT (~1400km)
+```
+
+## Prepare data
+Use the shell files in [gnss_downloading_tools]()
+
+
 ## Softwares
 1.RNXCMP: uncompressing and format transformer (like crx2rnx)
 
@@ -61,7 +65,7 @@ Base Station: station farthest from the center of earthquake, FOND (~175km)
 
 4.PPPWizard: Realtime PPP
 
-[code]()
+[code](http://www.ppp-wizard.net/)
 
 5.WHU Pride PPPAR: PPP post processing (as ground truth)
 
@@ -70,6 +74,9 @@ Base Station: station farthest from the center of earthquake, FOND (~175km)
 6.GPS toolboxs: other useful softwares
 
 [link](https://www.ngs.noaa.gov/gps-toolbox/)  such as GAMP
+
+
+
 
 ## General Idea
   
