@@ -1,0 +1,62 @@
+#!/bin/csh
+##
+## Purpose: get monthly DCB files from CODE (monthly!!!)
+##
+## Originally written by Feng Zhou on 03/11/2015 @ GFZ
+##
+## Email: zhouforme@163.com
+##
+## Section 1.1, GPS/Galileo technologies, GFZ German Research Centre for Geosciences
+#
+##===============================BEGIN PROGRAM=====================================##
+if ($#argv < 3) then
+more << EOF
+
+   Usage $0 <path> <yyyy> <mm> [nmon]
+
+   EXAMPLES: $0 ~/datafolder 2017 07
+             $0 ~/datafolder 2017 07 2
+
+EOF
+   exit
+endif
+
+set dcbdir = $1
+@ yyyy = $2
+@ mm = $3
+
+set yy = `echo $yyyy | awk '{printf("%s",substr($1,3,4))}'`
+@ count = 1
+if ($#argv == 4) then
+   @ count = $4
+endif
+
+echo "Download to:" $dcbdir
+
+#set dcbdir = /Users/zhoufeng/Documents/GNSS_download/dcb
+if (! -d $dcbdir) mkdir -p $dcbdir
+cd $dcbdir
+
+echo " "
+echo " Downloading CODE DCB files from ftp://ftp.aiub.unibe.ch ..."
+echo " "
+
+while ($count)
+   set cmm = `echo $mm | awk '{printf("%2.2d",$1)}'`
+   wget -qr -nH --cut-dirs=2 ftp://ftp.aiub.unibe.ch/CODE/$yyyy/P1C1$yy$cmm.DCB.Z
+   wget -qr -nH --cut-dirs=2 ftp://ftp.aiub.unibe.ch/CODE/$yyyy/P1P2$yy$cmm.DCB.Z
+   wget -qr -nH --cut-dirs=2 ftp://ftp.aiub.unibe.ch/CODE/$yyyy/P2C2$yy$cmm"_RINEX".DCB.Z
+   
+   echo "Download completed"
+   
+   sh_uncompress P1C1$yy$cmm.DCB.Z P1P2$yy$cmm.DCB.Z
+   if (-e P2C2$yy$cmm"_RINEX".DCB.Z) then
+      sh_uncompress P2C2$yy$cmm"_RINEX".DCB.Z
+      mv P2C2$yy$cmm"_RINEX".DCB P2C2$yy$cmm.DCB
+   endif
+   
+   @ count --
+   @ mm ++
+end
+#
+##================================END PROGRAM======================================##
